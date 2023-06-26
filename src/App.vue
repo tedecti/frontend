@@ -1,12 +1,15 @@
-<script setup>
-import HelloWorld from './views/HomeView.vue'
-
+<script>
+export default {
+  created() {
+    this.$store.dispatch("authData");
+    this.$store.dispatch("username");
+  },
+};
 </script>
 
 <template>
-  <HelloWorld />
+  <router-view></router-view>
 </template>
 
 <style scoped>
-
 </style>
